@@ -1,6 +1,5 @@
 import 'package:admob_playground/destination.dart';
 import 'package:flutter/material.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 const _interstitialAdUnitId = 'ca-app-pub-3940256099942544/8691691433';
 
@@ -18,7 +17,6 @@ class DestinationPage extends StatefulWidget {
 
 class _DestinationPageState extends State<DestinationPage> {
   // TODO: Add an Interstitial ad instance
-  InterstitialAd? _ad;
 
   @override
   void initState() {
@@ -75,29 +73,12 @@ class _DestinationPageState extends State<DestinationPage> {
 
   void _loadAd() {
     // TODO: Load an interstitial ad
-    InterstitialAd.load(
-      adUnitId: _interstitialAdUnitId,
-      request: const AdRequest(),
-      adLoadCallback: InterstitialAdLoadCallback(
-        onAdLoaded: (ad) {
-          ad.fullScreenContentCallback = FullScreenContentCallback(
-            onAdImpression: (ad) {
-              debugPrint("Displayed interstitial ad");
-            },
-          );
-          _ad = ad;
-        },
-        onAdFailedToLoad: (error) {
-          debugPrint(
-              'Ad failed to load: ${error.message}');
-        },
-      ),
-    );
+
   }
 
   void _tryShowAd() {
     // TODO: Show an interstitial ad if available
-    _ad?.show();
+
   }
 }
 

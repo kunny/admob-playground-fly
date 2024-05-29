@@ -1,7 +1,5 @@
-import 'package:admob_playground/widget/banner_ad_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import '../destination.dart';
 
@@ -59,15 +57,7 @@ class _DestinationListPageState extends State<DestinationListPage> {
             ),
           ),
           // TODO: Add anchored adaptive banner
-          AnchoredAdaptiveBannerAdWidget(
-            adUnitId: _collapsibleBannerAdUnitId,
-            adRequest: const AdRequest(
-              extras: {
-                "collapsible": "bottom",
-              },
-            ),
-            width: deviceWidth,
-          ),
+
         ],
       ),
     );

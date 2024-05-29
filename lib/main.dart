@@ -2,7 +2,6 @@ import 'package:admob_playground/page/destination_list_page.dart';
 import 'package:admob_playground/page/destination_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import 'destination.dart';
 
@@ -10,7 +9,6 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
   // TODO: Initialize Google Mobile Ads SDK
-  MobileAds.instance.initialize();
 
   runApp(const MyApp());
 }
